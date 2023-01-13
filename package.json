@@ -1,0 +1,22 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "learning with javascripting",
+  "main": "for-loop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onegoel/learn-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onegoel/learn-js/issues"
+  },
+  "homepage": "https://github.com/onegoel/learn-js#readme",
+  "dependencies": {
+    "javascripting": "^2.7.4"
+  }
+}
