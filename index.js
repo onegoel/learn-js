@@ -17,9 +17,9 @@ console.log(2 === '2')
 
 // wap - take input: check if prime or armstrong number
 
-let num = prompt("Enter a positive number: ")
-num = parseInt(num)
-function isPrime(num) {
+function isPrime() {
+    let num = prompt("Enter a positive number: ")
+    num = parseInt(num)
     let isPrime = true
     if(num == 2)
         isPrime = true
@@ -38,17 +38,17 @@ function isPrime(num) {
         console.log('Composite number')
 } 
 
-function isArmstrong(number) {
+function isArmstrong() {
     let sum = 0;
-    const number = prompt('Enter a three-digit positive integer: ');
-    let temp = number;
+    let num = prompt('Enter a three-digit positive integer: ');
+    let temp = num;
     while (temp > 0) {
         let rem = temp % 10;
         sum += rem * rem * rem;
         temp = parseInt(temp / 10);
     }
 
-    if (sum == number) {
+    if (sum == num) {
         console.log('Armstrong!');
     }
     else {
