@@ -1,6 +1,6 @@
 /*
 {
-    var x = 1 // global
+    var x = 1 // global, const also
     let y = 1 // local
 }
 */
@@ -62,9 +62,8 @@ function isArmstrong() {
 
 
 
-const isArmstrong = () => {
+const isArmstrong = (num) => {
     let sum = 0
-    let num = prompt('Enter a three-digit positive number: ')
     let temp = num
 
     while(temp > 0) {
@@ -74,15 +73,14 @@ const isArmstrong = () => {
     }
 
     if (sum == num) {
-        console.log('Armstrong!')
+        console.log('Armstrong')
     }
     else {
-        console.log(`Not Armstrong`)
+        console.log('Not Armstrong')
     }
 }
 
-const isPrime = () => {
-    let num = prompt("Enter a positive number: ")
+const isPrime = (num) => {
     num = parseInt(num)
     let isPrime = true
     if(num == 2)
@@ -101,3 +99,4 @@ const isPrime = () => {
     else
         console.log('Composite number') 
 }
+
