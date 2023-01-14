@@ -61,7 +61,7 @@ function isArmstrong() {
 // const isPrime = () => true;
 
 
-
+/*
 const isArmstrong = (num) => {
     let sum = 0
     let temp = num
@@ -99,4 +99,64 @@ const isPrime = (num) => {
     else
         console.log('Composite number') 
 }
+*/
 
+// created an object numFunctions
+// containing 2 functions - isPrime and isArmstrong
+// wrote both as arrow => functions
+
+const numFunctions = {
+    isPrime: (num) => {
+        num = parseInt(num);
+        if(num > 0) {
+            if(num === 1) {
+                // return `${num} is neither Prime or Composite`;
+                return false;
+            }
+            else {
+                for(let i = 2; i <= (num-1); i++) {
+                    if(num % i === 0)
+                        //return `${num} is not Prime`;
+                        return false;
+                }
+            }
+        }
+        else {
+            // return `${num} is non-Natural - cannot be Prime`;
+            return false;
+        }
+        // return `${num} is Prime`;
+        return true;
+    },
+
+    isArmstrong: (num) => {
+        let numDigits = num.toString().length;
+        //console.log(numDigits);
+        let temp = num;
+        let i = 0; 
+        let sum = 0;
+        let rem;
+        while(i < numDigits) {
+            rem = temp % 10;
+            sum += Math.pow(rem, numDigits);
+            temp = parseInt(temp/10);
+            i += 1;
+        }
+        let isArm = (sum === num)
+
+        /*
+        if(isArm)
+            return 'Armstrong';
+        else
+            return 'not Armstrong';
+        */
+
+        // return isArm ? `${num} is Armstrong` : `${num} is not Armstrong`;
+        return isArm;
+    }
+}
+
+module.exports = numFunctions
+
+// console.log(numFunctions.isArmstrong(9474));
+// yet to push
