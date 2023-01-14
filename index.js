@@ -158,5 +158,5 @@ const numFunctions = {
 
 module.exports = numFunctions
 
-// console.log(numFunctions.isArmstrong(9474));
+console.log(numFunctions.isPrime("aryan"));
 // yet to push
